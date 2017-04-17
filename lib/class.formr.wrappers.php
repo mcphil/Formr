@@ -157,7 +157,7 @@ class Wrapper extends Formr {
 		
 		# always add a label...
 		# if the label is empty add .sr-only, otherwise add .control-label
-		if(!empty($data['label'])) {
+		if(!empty($data['label']) || $data['type'] == 'radio') {
 			$label_class = static::bootstrap_css('label');
 		} else {
 			$label_class = 'sr-only';
